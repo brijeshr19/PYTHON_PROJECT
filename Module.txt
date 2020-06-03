@@ -1,0 +1,54 @@
+What is a Module?
+Consider a module to be the same as a code library.
+Module is a file (with the file extension .py) containing a set of functions to include
+in your application.
+
+Type of Modules?
+(a) There are core python modules (builtin)
+(b) Pip modules :Modules you can install using the pip package manager(including Django)
+(c) Custom modules (created by you)
+
+Create a Custom Module?
+To create a module just save the code you want in a file with the file extension .py
+
+def greeting(name):
+  print("Hello, " + name)
+  
+Use a Module using the import statement?
+Import the module named mymodule, and call the greeting function.
+Note: When using a function from a module, use the syntax: module_name.function_name.
+
+import mymodule
+mymodule.greeting("Jonathan")
+
+Built-in/Core Modules?
+There are several built-in/core modules in Python, which you can import whenever you want.
+
+For ex: Import and use the platform module:
+import platform
+x = platform.system()
+print(x)
+
+Import From Module?
+You can choose to import only parts from a module, by using the from keyword.
+
+mymodule.py
+The module named mymodule.py has one function and one dictionary:
+
+mymodule.py
+---------------------------
+def greeting(name):
+  print("Hello, " + name)
+
+person1 = {
+  "name": "John",
+  "age": 36,
+  "country": "Norway"
+}
+-----------------------------
+
+Note: When importing using the from keyword, do not use the module name when referring to elements in the module.
+Example: person1["age"], not mymodule.person1["age"]
+
+from mymodule import person1
+print (person1["age"])
